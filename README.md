@@ -12,7 +12,7 @@ pipenv install psycopg2
 ```
 
 ## SETTINGS IN DATABASE
-``
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -23,5 +23,6 @@ DATABASES = {
         'PORT': '5432'
     }
 }
+```
 
 
