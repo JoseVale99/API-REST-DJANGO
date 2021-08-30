@@ -38,4 +38,30 @@ def DepartmentApi(request, id=0):
         return JsonResponse('Delete successfully!',safe=False)
         
     
-
+@csrf_exempt
+def EmployeeApi(request, id=0):
+    if request.method == 'GET':
+        employee  = Employees.objects.all()
+        employee_serealizer = EmployeeSerializer(employee,
+        many=True)
+        return JsonResponse(employee_serealizer.data, safe=False)
+    elif request.method == 'POST':
+        employee_data = JSONParser().parse(request)
+        employee_serealizer = EmployeeSerializer(data=employee_data)
+        if employee_serealizer.is_valid():
+            employee_serealizer.save()
+            return JsonResponse('Add successfully!', safe=False)
+        return JsonResponse('Add failed!', safe=False)    
+    elif request.method == 'PUT':
+        employee_data = JSONParser().parse(request)
+        employee = Employees.objects.get(EmployeeID=employee_data['EmployeeID'])
+        employee_serealizer = EmployeeSerializer(employee, data=employee_data)
+        if employee_serealizer.is_valid():
+            employee_serealizer.save()
+            return JsonResponse('Update successfully!', safe=False)
+        return JsonResponse('Update failed!', safe=False)
+    elif request.method == 'DELETE':
+        employee = Employees.objects.get(EmployeeID=id)
+        employee.delete() 
+        return JsonResponse('Delete successfully!',safe=False)
+        
