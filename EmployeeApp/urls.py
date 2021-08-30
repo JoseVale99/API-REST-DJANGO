@@ -4,5 +4,5 @@ from EmployeeApp import views
 
 urlpatterns = [
    url(r'^department$',views.DepartmentApi),
-   url(r'^department/([0-9]+)$')
+   url(r'^department/([0-9]+)$', views.DepartmentApi)
 ]
