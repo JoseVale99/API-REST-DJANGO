@@ -1,3 +1,5 @@
 .vscode/*
 db.sqlite3
-settings.py
+DjangoAPI/settings.py
+DjangoAPI/__pycache__
+EmployeeApp/__pycache__
