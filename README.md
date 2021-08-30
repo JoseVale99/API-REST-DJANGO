@@ -10,3 +10,18 @@ pipenv install djangorestframework
 pipenv install django-cors-headers
 pipenv install psycopg2
 ```
+
+## SETTINGS IN DATABASE
+``
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'YOUR NAME DB',
+        'USER': 'YOUR USERNAME',
+        'PASSWORD': 'YOUR PASSWORD',
+        'HOST': 'YOUR HOST/ localhost',
+        'PORT': '5432'
+    }
+}
+
+
