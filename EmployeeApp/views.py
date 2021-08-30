@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 
-from EmployeeApp.models import Employee,Departments
+from EmployeeApp.models import Employees,Departments
 from EmployeeApp.serializers import EmployeeSerializer, DepartmentSerializer
 
 # Create your views here.
