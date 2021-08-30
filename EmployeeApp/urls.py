@@ -1,4 +1,4 @@
-from django.conf.urls import url, urls
+from django.conf.urls import url
 from EmployeeApp import views
 
 
