@@ -13,6 +13,10 @@ pipenv install psycopg2
 ## DEPENDENCIES 
 ```bash
 $ npm install -g @angular/cli
+AFTER
+$ ng version  
+CREATE NEW PROJECT IN ANGULAR JS
+$ ng new nameAppProject
 ```
 
 ## SETTINGS IN DATABASE
