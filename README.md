@@ -18,7 +18,7 @@ $ ng version
 CREATE NEW PROJECT IN ANGULAR JS
 $ ng new nameAppProject
 AND
-$ npm install --save-dev @angular-devkit/build-angular
+$ npm update
 ```
 
 ## SETTINGS IN DATABASE
