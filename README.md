@@ -10,6 +10,11 @@ pipenv install djangorestframework
 pipenv install django-cors-headers
 pipenv install psycopg2
 ```
+## DEPENDENCIES 
+```bash
+npm install -g @angular/cli
+
+```
 
 ## SETTINGS IN DATABASE
 ```python
