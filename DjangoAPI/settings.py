@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 MEDIA_URL = '/Photos/'
@@ -31,7 +35,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+# adding config
+cloudinary.config( 
+  cloud_name = "YOUR_CLOUD_NAME", 
+  api_key = "YOUR_API_KEY", 
+  api_secret = "YOUR_API_SECRET" 
+)
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'EmployeeApp.apps.EmployeeappConfig'
+    'EmployeeApp.apps.EmployeeappConfig',
+     'cloudinary'
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 
