@@ -37,9 +37,9 @@ ALLOWED_HOSTS = []
 
 # adding config
 cloudinary.config( 
-  cloud_name = "YOUR_CLOUD_NAME", 
-  api_key = "YOUR_API_KEY", 
-  api_secret = "YOUR_API_SECRET" 
+  cloud_name = "maximaseguridadapp", 
+  api_key = "454862721894482", 
+  api_secret = "ShnLOkQ0pJCOFfxNysO0puE_C3o" 
 )
 # Application definition
 
