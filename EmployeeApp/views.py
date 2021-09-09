@@ -70,5 +70,5 @@ def EmployeeApi(request, id=0):
 def SaveFile(request):
     file = request.FILES['file']
     file_name = default_storage.save(file.name, file)
-    return JsonResponse('Save file successfully!', safe=False)
+    return JsonResponse(f'{file.name}', safe=False)
 

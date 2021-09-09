@@ -7,6 +7,7 @@ name = "pypi"
 djangorestframework = "*"
 django-cors-headers = "*"
 psycopg2 = "*"
+cloudinary = "*"
 
 [dev-packages]
 
