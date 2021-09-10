@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 from pathlib import Path
 import os
 import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -35,12 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# adding config
-cloudinary.config( 
-  cloud_name = "maximaseguridadapp", 
-  api_key = "454862721894482", 
-  api_secret = "ShnLOkQ0pJCOFfxNysO0puE_C3o" 
-)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,8 +46,15 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'EmployeeApp.apps.EmployeeappConfig',
-     'cloudinary'
+    'cloudinary'
 ]
+# adding config
+cloudinary.config( 
+  cloud_name = "maximaseguridadapp", 
+  api_key = "454862721894482", 
+  api_secret = "ShnLOkQ0pJCOFfxNysO0puE_C3o" 
+)
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [

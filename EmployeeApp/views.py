@@ -8,6 +8,8 @@ from EmployeeApp.models import Employees,Departments
 from EmployeeApp.serializers import EmployeeSerializer, DepartmentSerializer
 
 from django.core.files.storage import default_storage
+
+import cloudinary.uploader
 # Create your views here.
 
 
@@ -69,6 +71,9 @@ def EmployeeApi(request, id=0):
 @csrf_exempt
 def SaveFile(request):
     file = request.FILES['file']
-    file_name = default_storage.save(file.name, file)
-    return JsonResponse(f'{file.name}', safe=False)
+    upload_data = cloudinary.uploader.upload(file,
+    folder = "profile/", 
+    public_id = file.name)
+    # file_name = default_storage.save(file.name, file)
+    return JsonResponse( upload_data['url'] , safe=False)
 

@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Departments(models.Model):
@@ -11,8 +10,7 @@ class Employees(models.Model):
     EmployeesName = models.CharField(max_length=500)
     Department = models.CharField(max_length=500)
     DateofJoining = models.DateField()
-    photoFileName =   models.CharField(max_length=500)
+    photoFileName =   models.TextField(blank=True)
 
-    
     
 

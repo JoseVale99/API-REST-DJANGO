@@ -8,6 +8,8 @@ djangorestframework = "*"
 django-cors-headers = "*"
 psycopg2 = "*"
 cloudinary = "*"
+pillow = "*"
+django = "*"
 
 [dev-packages]
 
