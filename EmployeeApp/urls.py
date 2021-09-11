@@ -9,5 +9,5 @@ urlpatterns = [
 
    url(r'^employee$',views.EmployeeApi),
    url(r'^employee/([0-9]+)$', views.EmployeeApi),
-   url(r'^employee/savefile/',views.SaveFile),
+   url(r'^employee/savefile/([0-9]+)$',views.SaveFile),
 ]+static(settings.MEDIA_URL, department_root = settings.MEDIA_ROOT)

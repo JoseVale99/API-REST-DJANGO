@@ -69,11 +69,10 @@ def EmployeeApi(request, id=0):
         return JsonResponse('Delete successfully!',safe=False)
         
 @csrf_exempt
-def SaveFile(request):
+def SaveFile(request, id=0):
     file = request.FILES['file']
     upload_data = cloudinary.uploader.upload(file,
     folder = "profile/", 
-    public_id = file.name)
-    # file_name = default_storage.save(file.name, file)
-    return JsonResponse( upload_data['url'] , safe=False)
+    public_id =id)
+    return JsonResponse( upload_data['secure_url'] , safe=False)
 

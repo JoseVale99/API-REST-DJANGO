@@ -35,4 +35,8 @@ DATABASES = {
 }
 ```
 
+## Screenshot
+
+<img src="Screenshot.png" with="70%">
+<img src="Screenshot_2.png" with="70%">
 
