@@ -49,7 +49,12 @@ INSTALLED_APPS = [
     'cloudinary'
 ]
 # adding config
-
+cloudinary.config( 
+  cloud_name = "maximaseguridadapp", 
+  api_key = "454862721894482", 
+  api_secret = "ShnLOkQ0pJCOFfxNysO0puE_C3o",
+  secure = True
+)
 
 CORS_ORIGIN_ALLOW_ALL = True
 
